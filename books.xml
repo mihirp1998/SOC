@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BookStore>
+<Book Category="Engineering">
+<Title>C# First</Title>
+<Author>Tom</Author>
+<Year>2012</Year>
+<Price>200$</Price>
+</Book>
+<Book Category="Children">
+<Title>Harry Potter</Title>
+<Author>J.K.Rowling</Author>
+<Year>2013</Year>
+<Price>100$</Price>
+</Book>
+</BookStore>

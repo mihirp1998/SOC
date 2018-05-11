@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Contact xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ContactDetails2018.xsd">
+
+<First_Name>Varun</First_Name>
+
+<Last_Name>Mathew</Last_Name>
+
+<Pet_Name>Vary</Pet_Name>
+
+<City>NY</City>
+
+<Country>America</Country>
+
+<Pin_Code>12345-6789</Pin_Code>
+
+</Contact>
+
+******************************************************************************
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- edited with XMLSpy v2015 sp2 (http://www.altova.com) by BITS-PILANI University, Dubai Campus (BITS-PILANI University, Dubai Campus) -->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" elementFormDefault="qualified" attributeFormDefault="unqualified" vc:minVersion="1.1">
+
+<xs:element name="PurchaseOrder">
+
+<xs:annotation>
+
+<xs:documentation>Comment describing your root element</xs:documentation>
+
+</xs:annotation>
+
+<xs:complexType>
+
+<xs:sequence>
+
+<xs:element name="ShipTo">
+
+<xs:complexType>
+
+<xs:sequence>
+
+<xs:element name="Name" type="xs:string"/>
+
+<xs:element name="Street" type="xs:string"/>
+
+<xs:element name="State">
+
+<xs:simpleType>
+
+<xs:restriction base="xs:string">
+
+<xs:length value="2"/>
+
+</xs:restriction>
+
+</xs:simpleType>
+
+</xs:element>
+
+<xs:element name="ZIP">
+
+<xs:simpleType>
+
+<xs:restriction base="xs:integer">
+
+<xs:totalDigits value="5"/>
+
+</xs:restriction>
+
+</xs:simpleType>
+
+</xs:element>
+
+<xs:element name="City" type="xs:string"/>
+
+</xs:sequence>
+
+<xs:attribute name="Country" type="xs:string"/>
+
+</xs:complexType>
+
+</xs:element>
+
+<xs:element name="BillTo">
+
+<xs:complexType>
+
+<xs:sequence>
+
+<xs:element name="Name" type="xs:string"/>
+
+<xs:element name="Street" type="xs:string"/>
+
+<xs:element name="City" type="xs:string"/>
+
+<xs:element name="State">
+
+<xs:simpleType>
+
+<xs:restriction base="xs:string">
+
+<xs:length value="2"/>
+
+</xs:restriction>
+
+</xs:simpleType>
+
+</xs:element>
+
+<xs:element name="ZIP">
+
+<xs:simpleType>
+
+<xs:restriction base="xs:integer">
+
+<xs:totalDigits value="5"/>
+
+</xs:restriction>
+
+</xs:simpleType>
+
+</xs:element>
+
+</xs:sequence>
+
+<xs:attribute name="Country" type="xs:string"/>
+
+</xs:complexType>
+
+</xs:element>
+
+<xs:element name="Items">
+
+<xs:complexType>
+
+<xs:sequence>
+
+<xs:element name="Item" maxOccurs="unbounded">
+
+<xs:complexType>
+
+<xs:sequence>
+
+<xs:element name="ProductName" type="xs:string"/>
+
+<xs:element name="Quantity" type="xs:int"/>
+
+<xs:element name="Price" type="xs:int"/>
+
+<xs:element name="ShipDate" type="xs:date"/>
+
+</xs:sequence>
+
+<xs:attribute name="PartNum">
+
+<xs:simpleType>
+
+<xs:restriction base="xs:string">
+
+<xs:pattern value="[0-9]{3}-[A-Z]{2}"/>
+
+</xs:restriction>
+
+</xs:simpleType>
+
+</xs:attribute>
+
+</xs:complexType>
+
+</xs:element>
+
+</xs:sequence>
+
+</xs:complexType>
+
+</xs:element>
+
+</xs:sequence>
+
+</xs:complexType>
+
+</xs:element>
+
+</xs:schema>

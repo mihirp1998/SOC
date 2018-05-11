@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PurchaseOrder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="PurchaseOrder2018.xsd">
+
+<ShipTo Country="America">
+
+<Name>Amreeth</Name>
+
+<Street>Victoria</Street>
+
+<State>NY</State>
+
+<ZIP>12345</ZIP>
+
+<City>NY</City>
+
+</ShipTo>
+
+<BillTo Country="England">
+
+<Name>Alfie</Name>
+
+<Street>Radius</Street>
+
+<City>Brighton</City>
+
+<State>BT</State>
+
+<ZIP>54678</ZIP>
+
+</BillTo>
+
+<Items>
+
+<Item PartNum="456-XY">
+
+<ProductName>iPad</ProductName>
+
+<Quantity>1</Quantity>
+
+<Price>2599</Price>
+
+<ShipDate>2018-06-12</ShipDate>
+
+</Item>
+
+<Item PartNum="123-AB">
+
+<ProductName>Phone</ProductName>
+
+<Quantity>3</Quantity>
+
+<Price>125</Price>
+
+<ShipDate>2018-05-12</ShipDate>
+
+</Item>
+
+</Items>
+
+</PurchaseOrder>
